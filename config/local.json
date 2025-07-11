@@ -1,0 +1,14 @@
+{
+  "system": {
+    "http": {
+      "port": 3001
+    },
+    "database": {
+      "host": "localhost",
+      "port": 5433,
+      "user": "postgres",
+      "password": "postgres",
+      "database": "postgres"
+    }
+  }
+}

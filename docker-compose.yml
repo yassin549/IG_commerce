@@ -1,21 +1,19 @@
-version: '3.8'
-
 services:
-  app:
-    image: evershop/evershop:latest
-    restart: always
-    environment:
-      DB_HOST: database
-      DB_PORT: 5432
-      DB_PASSWORD: postgres
-      DB_USER: postgres
-      DB_NAME: postgres
-    networks:
-      - myevershop
-    depends_on:
-      - database
-    ports:
-      - 3000:3000
+#  app:
+#    image: catchy/catchy:latest
+#    restart: always
+#    environment:
+#      DB_HOST: database
+#      DB_PORT: 5432
+#      DB_PASSWORD: postgres
+#      DB_USER: postgres
+#      DB_NAME: postgres
+#    networks:
+#      - mycatchy
+#    depends_on:
+#      - database
+#    ports:
+#      - 3001:3000
   
   #The postgres database: 
   database:
@@ -28,13 +26,13 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
-      - myevershop
+      - mycatchy
 
 networks:
-  myevershop:
-    name: MyEverShop
+  mycatchy:
+    name: MyCatchy
     driver: bridge
 
 volumes:
